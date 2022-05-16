@@ -28,8 +28,22 @@
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="precio" type="password" class="validate">
+          <input id="precio" 
+          type="number" 
+          class="validate">
           <label for="precio">Precio</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s8">
+          <select name="marca" id="marca">
+              <option>
+                Elija su marca 
+              </option>
+              @foreach($marca as $marca)
+              <option> {{$marca->nombre}}</option>
+              @endforeach
+          </select>
         </div>
       </div>
       <div class="row">
